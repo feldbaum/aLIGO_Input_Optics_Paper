@@ -1,1 +1,0 @@
-This repository contains the .tex files and plots for the Advanced LIGO input optics paper.

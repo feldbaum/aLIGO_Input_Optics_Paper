@@ -150,7 +150,7 @@ relative transfer function of the two photodiodes.
 
 \begin{figure}	
 	\centering
-	\includegraphics[width = 0.6\textwidth]{IMCpole_ugly.pdf}
+	\includegraphics[width = 0.7\textwidth, trim = 2.5cm 1.5cm 2.5cm 1cm]{Cavity_Pole.pdf}
 	\caption{The measured IMC cavity pole is shown together with a fit 
 		to \eqref{eq:PoleApx}.  The fit has a pole frequency of 8712 Hz 
 		which gives a finesse of 522.  These values are within the error 
@@ -170,6 +170,41 @@ reflectivity of the mirrors.
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Absorption Measurements}
+The absorption in the input mode cleaner can be measured independently of the losses 
+by tracking thermally sensitive properties of the mirrors.  
+In this case we tracked two different thermally sensitive properties; 
+the shift in the local radius of curvature of the optic 
+and the shift in the frequency of the fundamental mechanical eigenmode of the mirror.  
+
+The shift in the local radius of curvature of the optic was tracked by 
+tracking the higher order mode spacing as a function of power.  
+The spacing of the different higher order modes is dependent on the q 
+parameter of the cavity which is itself dependent on the local radius of 
+curvature of the mirrors.  
+The Winkler et. al.\cite{Winkler1991} approximation for the local radius of 
+curvature change is
+\begin{equation}
+	\frac{1}{\delta R}=\delta p=\frac{\alpha}{2\pi\omega^2\kappa}P_a,
+\end{equation}
+where $\alpha$ is the coefficient of thermal expansion of the mirror,  
+$\kappa$ is the thermal conductivity, $\omega$ is the beam size, and
+$P_a$ is the power absorbed by the mirror.  
+Assuming that the absorption is uniform across the mirrors and the same for 
+each mirror ray matrix methods can be used to derive the Gouy phase shift 
+of the cavity as a function of power.  
+This Gouy phase shift can be expressed equivalently as the shift in the 
+frequency location of the 10 peak.  
+With these assumptions and approximations the shift in the location of the 10 
+peak is given by 
+\begin{equation}
+	\delta f_{10}=-135.1 \frac{Hz}{ppm\cdot W},
+\end{equation}
+where the units of ppm is per mirror rather than total.
+
+
+
+
+
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Thermal Lensing}
@@ -182,6 +217,9 @@ reflectivity of the mirrors.
 		Eric Black's PDH paper.
 	\bibitem{DreverHall}
 		The Drever hall paper on the PDH technique.		
+	\bibitem{Winkler1991}
+		Winkler, W., K. Danzmann, A. Rudiger, and R. Schilling. Heating by Optical Absorption and 
+		the Performance of Interferometric Gravitational-Wave Detectors." Phys. Rev. A 44 117022-7036. 1 December, 1991.
 \end{thebibliography}		
 
 \end{document}
