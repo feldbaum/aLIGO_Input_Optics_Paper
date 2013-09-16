@@ -76,20 +76,46 @@ fit2.resp = squeeze(freqresp(fit2.tf,2*pi*fit2.freq));
 fit2.mag = 20*log10(abs(fit2.resp));
 fit2.phs = 180/pi*angle(fit2.resp);
 
+fnt1 = 14;
+fnt2 = 16;
+lnwt = 2;
+mrkr = 8;
+
+clrs = [204 102 0; ...
+        0   0   153]/255;
+
 figure(1)
 clf
 subplot(2,1,1)
-semilogx(freq,mag-fit.ofs(fit2.ind(1)),'-r',fit2.freq,fit2.mag,'-b')
-ylabel('Magnitude (dB)')
+set(gca, 'FontSize', fnt1)
+semilogx(freq,mag-fit.ofs(fit2.ind(1)), 'x', ...
+    'LineWidth', lnwt, 'Color', clrs(1,:), 'MarkerSize', mrkr)
+hold on
+semilogx(fit2.freq, fit2.mag, ...
+    'LineWidth', lnwt, 'Color', clrs(2,:))
+hold off
+ylabel('Magnitude (dB)', 'FontSize', fnt1)
+title('Input Mode Cleaner Cavity Pole', 'FontSize', fnt2)
 xlim([min(freq) max(freq)])
+set(gca, 'PlotBoxAspectRatio', [3 1 1])
 grid on
 
 subplot(2,1,2)
-semilogx(freq,phs,'-r',fit2.freq,fit2.phs,'-b')
-ylabel('Phase (deg)')
-xlabel('Frequency (Hz)')
+set(gca, 'FontSize', fnt1)
+semilogx(freq, phs, 'x', ...
+    'LineWidth', lnwt, 'Color', clrs(1,:), 'MarkerSize', mrkr)
+hold on
+semilogx(fit2.freq, fit2.phs, ...
+    'LineWidth', lnwt, 'Color', clrs(2,:))
+hold off
+ylabel('Phase (deg)', 'FontSize', fnt1)
+xlabel('Frequency (Hz)', 'FontSize', fnt1)
 xlim([min(freq) max(freq)])
+set(gca, 'PlotBoxAspectRatio', [3 1 1])
 grid on
+
+orient landscape
+print -dpdf ../Cavity_Pole.pdf
 
 %% Losses
 

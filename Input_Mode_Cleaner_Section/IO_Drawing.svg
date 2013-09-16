@@ -18,7 +18,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.48.4 r9939"
    version="1.0"
-   sodipodi:docname="IO_Drawing.svg"
+   sodipodi:docname="IO_Drawing.pdf"
    style="enable-background:new"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <sodipodi:namedview
@@ -40,8 +40,8 @@
      height="744.09449px"
      inkscape:window-width="1600"
      inkscape:window-height="878"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-x="1912"
+     inkscape:window-y="172"
      showgrid="true"
      showguides="false"
      gridanglex="8.4666669mm"
@@ -19298,7 +19298,7 @@
          x="464.00671"
          y="434.45276"
          style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial"
-         id="tspan15489">WFS</tspan></text>
+         id="tspan15489">WFSA</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;enable-background:new;font-family:Arial"
@@ -19383,6 +19383,18 @@
          x="254.28995"
          y="151.5434"
          style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial">Vacuum Envelope</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;enable-background:new;font-family:Arial"
+       x="504.5264"
+       y="459.71259"
+       id="text4083-1-9-9-4-3-8-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="504.5264"
+         y="459.71259"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial"
+         id="tspan15489-7">WFSB</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
