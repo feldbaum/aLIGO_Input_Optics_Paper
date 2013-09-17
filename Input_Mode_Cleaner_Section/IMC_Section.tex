@@ -47,18 +47,18 @@ suspensions \textbf{citation}.
 It has a free spectral range of 9.099 MHz and a finesse of 515.  
 The beam is injected along one of the long arms and extracted along the other (see \ref{fig:ioAll}).  
 The reflected beam is outfitted with an RF photodiode for Pound-Drever-Hall length sensing \textbf{citation} 
-and two wavefront sensors for angular control.  
+and two differential wavefront sensors for angular control.  
 In addition, a pickoff of the intra-cavity light is extracted behind the curved mirror, MC2, and sent to a 
 quadrant photodiode for additional angular information.  
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.9\textwidth, trim=3.5cm 7.5cm 11cm 3.5cm]{IO_Drawing.pdf}
-	\caption{A schematic layout of the input optics is shown.  
+	\caption{A schematic layout of the input optics.  
 		The input mode cleaner is represented by the three mirrors MC1, MC2, and MC3.  
-		It is an in vacuum triply suspended triangular cavity used as a frequency 
+		It is an in vacuum, triply suspended, triangular cavity used as a frequency 
 		and pointing reference.  It also passively filters the spatial structure 
-		and polarization of the incoming beam.}
+		and polarization of the transmitted beam.}
 	\label{fig:ioAll}
 \end{figure}		
 
@@ -67,9 +67,16 @@ quadrant photodiode for additional angular information.
 Defining the reflectivity of MC1 and MC3 to be $r$ and assuming the cavity is lossless such that 
 $t^2 = 1-r^2$ we can express the complex reflectivity of the cavity as 
 \begin{equation}
-	r_{IMC} = \frac{r(1+e^{-ik\ell})}{1+r^2e^{-ik\ell}},
+	r_{IMC} = \frac{r(1+e^{-i\phi})}{1+r^2e^{-i\phi}},
 \end{equation}
-where $k$ is the spatial frequency of the light and $\ell$ is the round trip length of the cavity.  
+where $\phi$ is the round trip phase given by 
+\begin{equation}
+	\phi=\tfrac{L}{c}\omega+(n+m)\psi+mod_2(n)\pi.
+	\label{eq:phi}
+\end{equation}	
+Here $L$ represents the round trip length, $c$ the speed of light, $\omega$ the laser frequency, 
+$\psi$ the round trip Gouy phase of the fundamental mode, and $m$/$n$ the mode index of the 
+TEM mode in question.  
 Notice that this expression is identical to that of a 2 mirror impedance matched cavity except 
 for the opposite sign in the denominator due to an odd number of mirrors.  
 
@@ -115,17 +122,17 @@ feedback scheme where lower frequencies are offloaded to higher stages.
 Sensing of the angular degrees of freedom of the input mode cleaner is achieved through 
 the use of differential wavefront sensing\cite{Anderson1984}\cite{Fritschel1998}.  
 The differential wavefront sensing scheme relies on sensing the beat note between 
-the first higher order mode and the Gaussian mode which is accepted by the cavity.  
+the first higher order mode and the fundamental Gaussian mode which is accepted by the cavity.  
 When a tilt or translation exists between the optical axis of the input beam and the optical axis 
 of the input mode cleaner the reflected beam from the cavity has a significant fraction of its 
 power in the TEM$_{01}$/TEM$_{10}$ mode\cite{Morrison1994}.  
 
 The TEM$_{01}$/TEM$_{10}$ mode beats with the sideband light in a unique way due to the 
-fact that the field strength has opposite signs on opposite sides of the center of the beam.  
+fact that the field strength has opposite signs on opposite sides of the beam.  
 This means that the beat note produced with the TEM$_{00}$ mode of the sideband light 
 has opposite signs on opposite sides of the beam.  
-These signs would cause cancellation if the detector is a single element detector which is 
-collecting the entire beam, but a split photodetector is sensitive to this effect.  
+These signs would cause cancellation if the entire beam were collected on a 
+single detector, but a split photodetector is sensitive to this effect.  
 For this reason the Advanced LIGO differential wavefront sensors use a quadrant detector 
 which is sensitive simultaneously to the pitch and yaw modes.
 In addition to the two differential wavefront sensors a quadrant detector sitting 
@@ -191,13 +198,13 @@ centered on the QPD behind MC2.
 If we define the reflectivity of MC1 and MC3 as $r$ and consider MC2 to be completely reflective, 
 then we can express the transmissivity of the IMC as
 \begin{equation}
-	t_{IMC}=\frac{-t^2e^{-ik(\ell-\ell_3)}}{1+r^2e^{-ik\ell}}.
+	t_{IMC}=e^{ik\ell_3}\frac{-t^2e^{-ik\phi}}{1+r^2e^{-i\phi}}.
 \end{equation}
-Here $t$ is the transmissivity of MC1 and MC3, $\ell$ is the total round trip length, 
-$\ell_3$ is the distance from MC1 to MC3, and $k=\tfrac{2\pi f}{c}$ is the spatial frequency 
-of the light.  
+Here $t$ is the transmissivity of MC1 and MC3, $\ell_3$ is the distance from MC1 to MC3, 
+,$k=\tfrac{2\pi f}{c}$ is the spatial frequency of the light, and 
+$\phi$ is given by \eqref{eq:phi}.
 The cavity is on resonance when $k\ell$ is a equal to $2n\pi+1$ for any $n\in\mathbb{Z}$.  
-Notice that transmissivity of the cavity looks identical to that of an impedance matched 
+Notice that the transmissivity of the cavity looks identical to that of an impedance matched 
 two mirror cavity except for the static phase shift $e^{ik\ell_3}$.  
 
 If we consider the transmissivity of frequencies very near the resonance frequency, 
@@ -218,13 +225,13 @@ a measurement of this parameter is sensitive to the losses in the cavity at the 
 of the errors in the known mirror reflectivities.
 
 There are many ways to measure the cavity pole; 
-the simplest way for us was to add a broadband amplitude modulator in between the laser 
+the simplest way for in our experiment was to add a broadband amplitude modulator in between the laser 
 and the input mode cleaner.  
 To measure the cavity pole we then locked the cavity on the carrier light and added 
 an amplitude modulation sideband which we swept from 500 Hz to 100 kHz.  
 By demodulating a sample of the light before it entered the cavity and comparing 
 it to the demodulated light in transmission of the cavity we were able to 
-measure the cavity pole very precisely \ref{fig:cavPole}.  
+measure the cavity pole very precisely (figure \ref{fig:cavPole}).  
 It should be noted that measuring the cavity pole in this way requires using two 
 carefully balanced photodiodes otherwise the measurement will be polluted by the 
 relative transfer function of the two photodiodes.
@@ -255,7 +262,7 @@ fluctuations.
 It is important to understand the source of this noise in the cavity measurement because 
 some noise sources are quieted by feedback system while some noises, e.g. sensing noises, 
 are impressed by the control system and show up
-as frequency noise at the output of the input mode cleaner.  
+as noise at the output of the input mode cleaner.  
 
 Figure \ref{fig:NoiseBudget} shows the results of our efforts to understand the source 
 of the measured length noise.  
@@ -266,8 +273,8 @@ three suspension resonances.
 Damping sensor noise is length noise from the shadow sensors used for active damping
 \textbf{Cite Earlier Section} being impressed onto the suspension through the damping loops.  
 
-At higher frequencies, above 100 Hz, the measured noise is dominated by vibration s
-of the injection bench of the prestabilized laser.  
+At higher frequencies, above 100 Hz, the measured noise is dominated by vibration 
+of the injection bench of the pre-stabilized laser.  
 The fact that this noise does not perfectly line up with the measured noise is due 
 to the fact that the vibration noise is only measured at one point on the PSL table 
 and the exact coupling is unknown.  
@@ -290,7 +297,7 @@ In this case we tracked two different thermally sensitive properties;
 the shift in the local radius of curvature of the optic 
 and the shift in the frequency of the fundamental mechanical eigenmode of the mirror.  
 
-The shift in the local radius of curvature of the optic was tracked by 
+The shift in the local radius of curvature of the optic was measured by 
 tracking the higher order mode spacing as a function of power.  
 The spacing of the different higher order modes is dependent on the q 
 parameter of the cavity which is itself dependent on the local radius of 
@@ -304,7 +311,7 @@ where $\alpha$ is the coefficient of thermal expansion of the mirror,
 $\kappa$ is the thermal conductivity, $\omega$ is the beam size, and 
 $P_a$ is the power absorbed by the mirror.  
 Assuming that the absorption is uniform across the mirrors and the same for 
-each mirror ray matrix methods can be used to derive the Gouy phase shift 
+each mirror; ray matrix methods can be used to derive the Gouy phase shift 
 of the cavity as a function of power.  
 This Gouy phase shift can be expressed equivalently as the shift in the 
 frequency location of the 10 peak.  
@@ -321,7 +328,7 @@ allow one to distinguish between mirrors.
 Tracking the fundamental mechanical eigenmode of the mirrors is however sensitive 
 to the absorption of each mirror.  
 
-The frequency of each of the three mirrors eigenmodes was first identified by 
+The frequency of each of the three mirror's eigenmodes was first identified by 
 driving the mirror around the frequency expected from FEA simulations.  
 The feedback signal to the laser frequency was used as the readout mechanism.  
 Figure \ref{fig:ModeTracking} shows the results of tracking the drumhead eigenfrequency 
@@ -371,6 +378,31 @@ Putting all of this together gives the absorption numbers quoted in table \ref{t
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Thermal Lensing}
+We attempted to track the thermal lensing of the input mode cleaner using digital 
+cameras during high power testing.  
+The digital cameras measured the beam size continuously while the power into the 
+IMC was slowly increased.  
+However; no signal was observed within the accuracy of the beam size measurement on the CCDs.  
+
+The Gouy phase tracking absorption measurements allow us to infer the amount of thermal 
+lensing under the same set of assumptions as the absorption measurements.  
+That is to say we assume that the absorption at each mirror is proportional to the slope 
+observed during the eigenmode tracking measurements.  
+We also assume that this absorption shows up as a local radius of curvature change 
+given by the Winkler approximation.  
+Using these adjusted radii of curvature the stable mode in the cavity can be calculated 
+as a function of power.  
+Expanding the result linearly in the input power, the q parameter at the 
+output of the IMC is given by 
+\begin{equation}
+	q_{IMC}=-0.2325+i13.3832+(6.49\cdot10^{-4}-i8.26\cdot10^{-4})P,
+\end{equation}	
+where $P$ is the input power to the IMC expressed in Watts.  
+If one calculates the overlap between this beam at 0 W input power and 
+this beam at e.g. 100 W of input power, the overlap only drops by 30 ppm indicating that 
+the thermal lensing in the input mode cleaner is negligible.  
+
+
 
 
 \begin{thebibliography}{9}
