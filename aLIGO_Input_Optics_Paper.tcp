@@ -1,0 +1,12 @@
+[FormatInfo]
+Type=TeXnicCenterProjectInformation
+Version=4
+
+[ProjectInfo]
+MainFile=aLIGO_Input_Optics_Paper.tex
+UseBibTeX=1
+UseMakeIndex=0
+ActiveProfile=LaTeX => PDF
+ProjectLanguage=en
+ProjectDialect=US
+

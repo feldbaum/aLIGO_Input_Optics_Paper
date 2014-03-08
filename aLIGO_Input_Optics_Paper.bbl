@@ -1,0 +1,102 @@
+\begin{thebibliography}{13}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem[{fin()}]{finesse}
+\enquote{Finesse: Frequency Domain Interferometer Simulation Software.}
+\newblock ????
+\newline\urlprefix\url{http://www.gwoptics.org/finesse/}
+
+\bibitem[{fra()}]{franzen_optics_drawings}
+\enquote{Uses the vector components library developed by Alexander Franzen;
+  available at http://www.gwoptics.org/ComponentLibrary/.}
+\newblock ????
+\newline\urlprefix\url{http://www.gwoptics.org/ComponentLibrary/}
+
+\bibitem[{Adhikari et~al.(2008)Adhikari, Ballmer, and Fritschel}]{ligo_T070236}
+Adhikari, R., Ballmer, S., and Fritschel, P.
+\newblock \enquote{Interferometer Sensing and Control Requirements.}
+\newblock \emph{Publicly Available Internal Note of the LIGO Collaboration}
+  T070236 (2008).
+\newline\urlprefix\url{https://dcc.ligo.org/LIGO-T070236}
+
+\bibitem[{Anderson(1984)}]{anderson_alignment_1984}
+Anderson, D.~Z.
+\newblock \enquote{Alignment of resonant optical cavities.}
+\newblock \emph{Applied Optics} 23 (1984).17: 2944–2949.
+\newline\urlprefix\url{http://www.opticsinfobase.org/abstract.cfm?&id=27768}
+
+\bibitem[{Arain et~al.(2009)Arain, Mueller, Martin, Quetschke, Reitze, Tanner,
+  and Williams}]{ligo_T020020}
+Arain, M., Mueller, G., Martin, R., Quetschke, V., Reitze, D.~H., Tanner,
+  D.~B., and Williams, L.
+\newblock \enquote{Input Optics Subsystem Design Requirements Document.}
+\newblock \emph{Publicly Available Internal Note of the LIGO Collaboration}
+  T020020 (2009).
+\newline\urlprefix\url{https://dcc.ligo.org/LIGO-T020020}
+
+\bibitem[{Black(2001)}]{black_introduction_2001}
+Black, Eric~D.
+\newblock \enquote{An introduction to {Pound–Drever–Hall} laser frequency
+  stabilization.}
+\newblock \emph{American Journal of Physics} 69 (2001).1: 79.
+\newline\urlprefix\url{http://link.aip.org/link/AJPIAS/v69/i1/p79/s1&Agg=doi}
+
+\bibitem[{Drever et~al.(1983)Drever, Hall, Kowalski, Hough, Ford, Munley, and
+  Ward}]{drever_laser_1983}
+Drever, R. W.~P., Hall, John~L., Kowalski, F.~V., Hough, J., Ford, G.~M.,
+  Munley, A.~J., and Ward, H.
+\newblock \enquote{Laser phase and frequency stabilization using an optical
+  resonator.}
+\newblock \emph{Applied Physics B} 31 (1983).2: 97–105.
+\newline\urlprefix\url{http://link.springer.com/article/10.1007/BF00702605}
+
+\bibitem[{Fritschel et~al.(1998)Fritschel, Mavalvala, Shoemaker, Sigg, Zucker,
+  and González}]{fritschel_alignment_1998}
+Fritschel, P., Mavalvala, N., Shoemaker, D., Sigg, D., Zucker, M., and
+  González, G.
+\newblock \enquote{Alignment of an interferometric gravitational wave
+  detector.}
+\newblock \emph{Applied Optics} 37 (1998).28: 6734–6747.
+\newline\urlprefix\url{http://www.opticsinfobase.org/abstract.cfm?id=61206}
+
+\bibitem[{Morrison et~al.(1994)Morrison, Meers, Robertson, and
+  Ward}]{morrison_automatic_1994}
+Morrison, E., Meers, B.~J., Robertson, D.~I., and Ward, H.
+\newblock \enquote{Automatic alignment of optical interferometers.}
+\newblock \emph{Applied optics} 33 (1994).22: 5041–5049.
+\newline\urlprefix\url{http://www.opticsinfobase.org/abstract.cfm?&id=42086}
+
+\bibitem[{Mueller(2003)}]{ligo_T020022}
+Mueller, G.
+\newblock \enquote{Pointing Requirements in Advanced LIGO Part I.}
+\newblock \emph{Publicly Available Internal Note of the LIGO Collaboration}
+  T020022 (2003).
+\newline\urlprefix\url{https://dcc.ligo.org/LIGO-T020022}
+
+\bibitem[{Privitera(2012)}]{ligo_T1100338}
+Privitera, S.
+\newblock \enquote{Sensitivity Acheived by the LIGO and VIRGO Gravitational
+  Wave During LIGO's Sixth and Virgo's Second and Third Science Runs.}
+\newblock \emph{Publicly Available Internal Note of the LIGO Collaboration}
+  T1100338 (2012).
+\newline\urlprefix\url{https://dcc.ligo.org/LIGO-T1100338}
+
+\bibitem[{Shoemaker(2010)}]{ligo_T0900288}
+Shoemaker, D.~H.
+\newblock \enquote{Advanced LIGO Anticipated Sensitivity Curves.}
+\newblock \emph{Publicly Available Internal Note of the LIGO Collaboration}
+  T0900288 (2010).
+\newline\urlprefix\url{https://dcc.ligo.org/LIGO-T0900288}
+
+\bibitem[{Winkler et~al.(1991)Winkler, Danzmann, Rüdiger, and
+  Schilling}]{winkler_heating_1991}
+Winkler, W., Danzmann, K., Rüdiger, A., and Schilling, R.
+\newblock \enquote{Heating by optical absorption and the performance of
+  interferometric gravitational-wave detectors.}
+\newblock \emph{Physical Review A} 44 (1991).11: 7022–7036.
+\newline\urlprefix\url{http://docuserv.ligo.caltech.edu/docs/public/P/P910012-00.pdf}
+
+\end{thebibliography}
