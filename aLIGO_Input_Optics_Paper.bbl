@@ -4,17 +4,6 @@
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 
-\bibitem[{fin()}]{finesse}
-\enquote{Finesse: Frequency Domain Interferometer Simulation Software.}
-\newblock ????
-\newline\urlprefix\url{http://www.gwoptics.org/finesse/}
-
-\bibitem[{fra()}]{franzen_optics_drawings}
-\enquote{Uses the vector components library developed by Alexander Franzen;
-  available at http://www.gwoptics.org/ComponentLibrary/.}
-\newblock ????
-\newline\urlprefix\url{http://www.gwoptics.org/ComponentLibrary/}
-
 \bibitem[{Adhikari et~al.(2008)Adhikari, Ballmer, and Fritschel}]{ligo_T070236}
 Adhikari, R., Ballmer, S., and Fritschel, P.
 \newblock \enquote{Interferometer Sensing and Control Requirements.}
@@ -52,6 +41,20 @@ Drever, R. W.~P., Hall, John~L., Kowalski, F.~V., Hough, J., Ford, G.~M.,
   resonator.}
 \newblock \emph{Applied Physics B} 31 (1983).2: 97–105.
 \newline\urlprefix\url{http://link.springer.com/article/10.1007/BF00702605}
+
+\bibitem[{Franzen(2010)}]{franzen_optics_drawings}
+Franzen, A.
+\newblock \enquote{Uses the vector components library developed by Alexander
+  Franzen; available at http://www.gwoptics.org/ComponentLibrary/.}
+\newblock 2010.
+\newline\urlprefix\url{http://www.gwoptics.org/ComponentLibrary/}
+
+\bibitem[{Freise(2013)}]{finesse}
+Freise, A.
+\newblock \enquote{Finesse: Frequency Domain Interferometer Simulation
+  Software.}
+\newblock 2013.
+\newline\urlprefix\url{http://www.gwoptics.org/finesse/}
 
 \bibitem[{Fritschel et~al.(1998)Fritschel, Mavalvala, Shoemaker, Sigg, Zucker,
   and González}]{fritschel_alignment_1998}

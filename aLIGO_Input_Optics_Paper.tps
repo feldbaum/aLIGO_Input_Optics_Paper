@@ -16,25 +16,25 @@ MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-8
 MaxPos.y=-30
-NormalPos.left=0
-NormalPos.top=0
-NormalPos.right=1073
-NormalPos.bottom=354
+NormalPos.left=150
+NormalPos.top=150
+NormalPos.right=1227
+NormalPos.bottom=502
 Class=CLatexEdit
-Document=aLIGO_Input_Optics_Paper.tex
+Document=IMC_Section.tex
 
 [Frame0_Row0]
-cyCur=295
+cyCur=293
 cyMin=10
 
 [Frame0_Col0]
-cxCur=1036
+cxCur=1040
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=7
-Cursor.column=18
-TopSubLine=0
+Cursor.row=68
+Cursor.column=41
+TopSubLine=51
 
 [Frame1]
 Columns=1
@@ -45,12 +45,12 @@ MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-8
 MaxPos.y=-30
-NormalPos.left=150
-NormalPos.top=150
-NormalPos.right=1227
-NormalPos.bottom=502
+NormalPos.left=0
+NormalPos.top=0
+NormalPos.right=1073
+NormalPos.bottom=354
 Class=CLatexEdit
-Document=IMC_Section.tex
+Document=aLIGO_Input_Optics_Paper.tex
 
 [Frame1_Row0]
 cyCur=481
@@ -61,9 +61,9 @@ cxCur=1206
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=366
-Cursor.column=0
-TopSubLine=357
+Cursor.row=28
+Cursor.column=36
+TopSubLine=0
 
 [Frame2]
 Columns=1
@@ -90,9 +90,9 @@ cxCur=1040
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=167
-Cursor.column=0
-TopSubLine=150
+Cursor.row=134
+Cursor.column=47
+TopSubLine=93
 
 [Frame3]
 Columns=1
@@ -119,8 +119,8 @@ cxCur=1040
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=73
-Cursor.column=1
+Cursor.row=75
+Cursor.column=38
 TopSubLine=58
 
 [Frame4]
@@ -177,7 +177,7 @@ cxCur=1040
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=36
-Cursor.column=9
-TopSubLine=28
+Cursor.row=26
+Cursor.column=13
+TopSubLine=11
 

@@ -1,6 +1,7 @@
 
 %==================================================================================================
 \section{Input Mode Cleaner}
+\label{sec:input_mode_cleaner}
 
 The input mode cleaner is the heart of the input optics, serving simultaneously as a spatial filter, 
 polarization filter, frequency reference, and pointing reference.  
@@ -13,6 +14,7 @@ and two differential wavefront sensors for angular control.
 In addition, a pickoff of the intra-cavity light is extracted behind the curved mirror, MC2, and sent to a 
 quadrant photodiode for additional angular information.  
 
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 \begin{figure}
 	\centering
 	\includegraphics[width=0.9\textwidth, trim=3.5cm 7.5cm 11cm 3.5cm]{IO_Drawing.pdf}
@@ -22,10 +24,13 @@ quadrant photodiode for additional angular information.
 		and pointing reference.  It also passively filters the spatial structure 
 		and polarization of the transmitted beam.}
 	\label{fig:ioAll}
-\end{figure}		
+\end{figure}
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Length Control}
+\label{sec:length_control}
+
 Defining the reflectivity of MC1 and MC3 to be $r$ and assuming the cavity is lossless such that 
 $t^2 = 1-r^2$ we can express the complex reflectivity of the cavity as 
 \begin{equation}
@@ -51,9 +56,9 @@ This technique is known as the Pound-Drever-Hall technique\cite{black_introducti
 and allows for a very precise comparison between the length of the cavity and the frequency 
 of the carrier light.  
 
-As discussed in the requirements section \textbf{reference earlier section} one of the primary 
+As discussed in the requirements section \ref{sec:design_requirements} one of the primary 
 goals of the input optics is to quiet the laser frequency by at least an order of magnitude 
-between 10 Hz and 10 kHz\textbf{reference earlier plot}.  
+between 10 Hz and 10 kHz\ref{fig:FreqReqs}.  
 It is important however that the input optics not impress the length noise of the input mode 
 cleaner at low frequencies where the laser frequency is much quieter.  
 For this reason the cavity feedback servo is designed to servo the length of the 
@@ -66,6 +71,7 @@ with progressively less actuation strength at lower stages.
 For this reason the different stages of the suspension are used in a hierarchical 
 feedback scheme where lower frequencies are offloaded to higher stages.  
 
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth,trim = 2.5cm 2cm 2.5cm 1.5cm]{Open_Loop_Tfs.pdf}
@@ -77,10 +83,13 @@ feedback scheme where lower frequencies are offloaded to higher stages.
 		signal is instead used to stabilize the laser frequency.}
 	\label{fig:ControlLoops}
 \end{figure}
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Angular Control}
+\label{sec:angular_control}
+
 Sensing of the angular degrees of freedom of the input mode cleaner is achieved through 
 the use of differential wavefront sensing\cite{anderson_alignment_1984}\cite{fritschel_alignment_1998}.  
 The differential wavefront sensing scheme relies on sensing the beat note between 
@@ -157,6 +166,8 @@ centered on the QPD behind MC2.
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Cavity Pole}
+\label{sec:cavity_pole}
+
 If we define the reflectivity of MC1 and MC3 as $r$ and consider MC2 to be completely reflective, 
 then we can express the transmissivity of the IMC as
 \begin{equation}
@@ -198,6 +209,7 @@ It should be noted that measuring the cavity pole in this way requires using two
 carefully balanced photodiodes otherwise the measurement will be polluted by the 
 relative transfer function of the two photodiodes.
 
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width = 0.7\textwidth, trim = 2.5cm 1.5cm 2.5cm 1cm]{Cavity_Pole.pdf}
@@ -208,6 +220,7 @@ relative transfer function of the two photodiodes.
 		possibility of excessive losses.}
 	\label{fig:cavPole}
 \end{figure}
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The results are shown in figure \ref{fig:cavPole} together with a fit to equation 
 \eqref{eq:PoleApx}.  The results give a cavity pole of 8712 Hz which is equivalent 
@@ -217,6 +230,8 @@ reflectivity of the mirrors.
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Noise Budget}
+\label{sec:noise_budget}
+
 
 As with all lock-in experiments, the measured feedback signals to the length and 
 frequency path are a measure of the sensitivity of the input mode cleaner to length 
@@ -241,7 +256,7 @@ The fact that this noise does not perfectly line up with the measured noise is d
 to the fact that the vibration noise is only measured at one point on the PSL table 
 and the exact coupling is unknown.  
 
-
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width = 0.8\textwidth,trim = 2.5cm 1.5cm 2.5cm 1.5cm]{IMC_Noise_Budget.pdf}
@@ -250,9 +265,12 @@ and the exact coupling is unknown.
 		well the measured noise except for the gap between 5 Hz and 80 Hz.}
 	\label{fig:NoiseBudget}
 \end{figure}
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Absorption Measurements}
+\label{sec:absorption_measurements}
+
 The absorption in the input mode cleaner can be measured independently of the losses 
 by tracking thermally sensitive properties of the mirrors.  
 In this case we tracked two different thermally sensitive properties; 
@@ -298,6 +316,7 @@ of each of the optics during a 120 W power step lasting 75 minutes.
 The slope of the MC1 and MC2 curves is 2.55 times greater than the slope of the 
 MC3 curve.  
 
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.75\textwidth]{Mode_Tracking.png}
@@ -310,6 +329,7 @@ MC3 curve.
 		allows for a precise determination of the absorption of each optic.}
 	\label{fig:ModeTracking}
 \end{figure}	
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Including this relative slope information in the gouy phase shift calculation described 
 above, the frequency shift of the 01 mode for MC3 is $\delta f_{MC3}=274.6\ \tfrac{Hz}{ppm*W}$ 
@@ -340,6 +360,8 @@ Putting all of this together gives the absorption numbers quoted in table \ref{t
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Thermal Lensing}
+\label{sec:thermal_lensing}
+
 We attempted to track the thermal lensing of the input mode cleaner using digital 
 cameras during high power testing.  
 The digital cameras measured the beam size continuously while the power into the 

@@ -1,6 +1,7 @@
 
 %=================================================================================================
 \section{Introduction}
+\label{sec:introduction}
 
 A worldwide effort to directly detect gravitational radiation with large scale laser interferometers 
 has been underway for the past several decades.  
@@ -40,6 +41,7 @@ input optics chain and some conclusions.
 
 %==================================================================================================
 \section{Design Requirements}
+\label{sec:design_requirements}
 
 The design requirements for the input optics subsystem derive from the designed sensitivity of the 
 interferometer.  
@@ -54,6 +56,7 @@ the 'technical noise sources' below this limit.
 In fact the subsystem requirements were set by demanding that the technical noise sources be a factor of 
 10 below the design sensitivity\cite{ligo_T070236}.  
 
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.8\textwidth,trim=2cm 1cm 2cm 1cm]{aLIGO_Design_Sensitivity.pdf}
@@ -63,9 +66,11 @@ In fact the subsystem requirements were set by demanding that the technical nois
 		which set the requirements for the interferometer subsystems such as the input optics.}
 	\label{fig:aLIGODesignSensitivity}
 \end{figure}
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Frequency Noise at the Interferometer Input}
+\label{sec:frequency_noise_interferometer}
 
 A perfect Michelson interferometer is completely insensitive to frequency noise; a fact which 
 is a large motivator in choosing the Michelson topology for gravitational wave interferometers.  
@@ -89,6 +94,7 @@ arm length feedback servo.
 Also shown are the expected length noise of the input mode cleaner as well as the expected frequency 
 noise out of the pre-stabilized laser.  
 
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.8\textwidth,trim=2cm 1cm 2cm 1cm]{Freq_Noise_Reqs.pdf}
@@ -101,7 +107,8 @@ noise out of the pre-stabilized laser.
 		In reality acoustic effects in the injection optics between the PSL and the in-vacuum input 
 		optics will require a higher level of suppression.}
 	\label{fig:FreqReqs}
-\end{figure}		
+\end{figure}
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The job of the input optics is therefore to stabilize the laser frequency by roughly a factor of 20 
 between 10 Hz and 10 kHz.  
@@ -112,6 +119,8 @@ to the isolated in-vacuum optics.
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Beam Alignment Noise at the Interferometer Input}
+\label{sec:beam_alignment_noise}
+
 As with frequency noise, a perfect Michelson interferometer is first order insensitive to pointing 
 noise.  
 There are two types of imperfections which couple pointing noise to the gravitational wave 
@@ -120,8 +129,7 @@ The first considered in \cite{ligo_T020022} is caused by residual misalignments 
 optics causing the misaligned beam to rejoin with the main interferometer mode and show up 
 in the gravitational wave channel.  
 The second coupling is caused by the beam spot motion on the core interferometer optics 
-causing the residual angular motion of the optics to couple to the gravitational wave channel.
-This effect is considered in \cite{ligoG1300442}.  
+causing the residual angular motion of the optics to couple to the gravitational wave channel.  
 These two effects lead to similar noise requirements at the input to the interferometer which 
 a beam stability of $4\cdot10^{-10}\ \frac{rad}{\sqrt{Hz}}$ at 100 Hz and above and decreasing 
 (getting less stringent) as $f^2$ below 100 Hz.
@@ -129,6 +137,8 @@ a beam stability of $4\cdot10^{-10}\ \frac{rad}{\sqrt{Hz}}$ at 100 Hz and above 
 
 %--------------------------------------------------------------------------------------------------
 \subsection{RF Sidebands}
+\label{sec:rf_sidebands}
+
 Sensing and controlling most of the seven degrees of freedom of the interferometer are done by some 
 variant of the Pound Drever Hall technique \cite{drever_laser_1983}.  
 This technique uses optical heterodyne detection to sense the phase of the returning light from 
@@ -148,6 +158,8 @@ maintain a residual amplitude modulation level below $1\cdot10^{-4}$ $\frac{AM}{
 
 %--------------------------------------------------------------------------------------------------
 \subsection{In-Vacuum Optical Isolation}
+\label{sec:in-vacuum_optical_isolation}
+
 The input optics is also required to provide isolation from the light reflected off of the 
 interferometer.  
 This is necessary to avoid inadvertently forming an optical cavity between the components 
@@ -159,6 +171,8 @@ the isolation requirement level was set at 30 dB\cite{ligo_T020020}.
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Throughput and Availability}
+\label{sec:throughput_availability}
+
 The final requirements on the input optics are placed on the amount of light which is delivered 
 to the interferometer and the amount of time which the input mode cleaner is available.  
 In order to deliver the 125 W of laser power required for full power operation the input optics 
